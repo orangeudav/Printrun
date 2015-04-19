@@ -1603,13 +1603,13 @@ class pronsole(cmd.Cmd):
             self.logError(_("Printer is currently printing. Please pause the print before you issue manual commands."))
             return
         if "xy" in l.lower():
-            self.p.send_now("G28 X0 Y0")
+            self.p.send_now("G28 X Y")
         elif "x" in l.lower():
-            self.p.send_now("G28 X0")
+            self.p.send_now("G28 X")
         elif "y" in l.lower():
-            self.p.send_now("G28 Y0")
+            self.p.send_now("G28 Y")
         if "z" in l.lower():
-            self.p.send_now("G28 Z0")
+            self.p.send_now("G28 Z")
         if "e" in l.lower():
             self.p.send_now("G92 E0")
         if not len(l):
