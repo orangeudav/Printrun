@@ -44,7 +44,7 @@ class XYButtons(BufferedCanvas):
     spacer = 7
     imagename = "control_xy.png"
     corner_to_axis = {
-        -1: "center",
+        -1: "xy",
         0: "x",
         1: "z",
         2: "y",
