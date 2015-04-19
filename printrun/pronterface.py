@@ -595,14 +595,14 @@ class PronterWindow(MainWindow, pronsole.pronsole):
     def homeButtonClicked(self, axis):
         # When user clicks on the XY control, the Z control no longer gets spacebar/repeat signals
         self.zb.clearRepeat()
-        if axis == "x":
+        if axis == "xy":
+            self.onecmd('home XY')
+        elif axis == "x":
             self.onecmd('home X')
         elif axis == "y":  # upper-right
             self.onecmd('home Y')
         elif axis == "z":
             self.onecmd('home Z')
-        elif axis == "xy":
-            self.onecmd('home XY')
         elif axis == "all":
             self.onecmd('home')
         else:
